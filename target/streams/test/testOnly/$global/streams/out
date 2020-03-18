@@ -1,0 +1,148 @@
+[0m[[0mdebug[0m] [0mjavaOptions: List()[0m
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for org.specs2.runner.Specs2Framework produced 0 initial tasks for 0 tests.[0m
+[0m[[0mdebug[0m] [0mRunner for org.scalatest.tools.Framework produced 1 initial tasks for 1 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(UserControllerSpec, sbt.ForkMain$SubclassFingerscan@5514c725, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mUserControllerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mHomeController Index[0m[0m
+[0m[[0minfo[0m] [0m[32m- should render the index page[0m[0m
+[0m[[0minfo[0m] [0m[32mUserController GET /users/register[0m[0m
+[0m[[0minfo[0m] [0m[32m- should render registeration form[0m[0m
+[0m[[0minfo[0m] [0m[32mUserController POST /users/register[0m[0m
+[0m[[0minfo[0m] [0m[32m- should accept registeration post form with valid data[0m[0m
+[0m[[0minfo[0m] [0m[32mUserControler POST /users/login[0m[0m
+[0m[[0minfo[0m] [0m[31m- should Log a valid user in *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  400 was not equal to 303 (UserControllerSpec.scala:56)[0m[0m
+[0m[[0minfo[0m] [0m[32mUserControler POST /users/login[0m[0m
+[0m[[0minfo[0m] [0m[31m- should reject an valid user in *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  "[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m  <!DOCTYPE html>[0m[0m
+[0m[[0minfo[0m] [0m[31m  <html lang="en">[0m[0m
+[0m[[0minfo[0m] [0m[31m      <head>[0m[0m
+[0m[[0minfo[0m] [0m          [0m
+[0m[[0minfo[0m] [0m[31m          <title>MiniBot - Register a User</title>[0m[0m
+[0m[[0minfo[0m] [0m[31m          <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css">[0m[0m
+[0m[[0minfo[0m] [0m[31m          <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">[0m[0m
+[0m[[0minfo[0m] [0m[31m          <script src="/assets/javascripts/hello.js" type="text/javascript"></script>[0m[0m
+[0m[[0minfo[0m] [0m[31m      </head>[0m[0m
+[0m[[0minfo[0m] [0m[31m      <body>[0m[0m
+[0m[[0minfo[0m] [0m          [0m
+[0m[[0minfo[0m] [0m          [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m      <head>[0m[0m
+[0m[[0minfo[0m] [0m[31m          <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css">[0m[0m
+[0m[[0minfo[0m] [0m[31m      </head>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m      <body>[0m[0m
+[0m[[0minfo[0m] [0m[31m          <div class="content">[0m[0m
+[0m[[0minfo[0m] [0m[31m              <div class="register-form">[0m[0m
+[0m[[0minfo[0m] [0m              [0m
+[0m[[0minfo[0m] [0m                  [0m
+[0m[[0minfo[0m] [0m                  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m                   [0m
+[0m[[0minfo[0m] [0m[31m  <form action="/users/register" method="POST" >[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m                  <input type="hidden" name="csrfToken" value="8dbeff57082ff36a6eff0204e466f19f9f636d88-1584533873312-47302b74f2c1ce17db11b80f"/>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m                  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m  <dl class=" " id="username_field">[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m      <dt><label for="username">username</label></dt>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m      <dd>[0m[0m
+[0m[[0minfo[0m] [0m[31m      <input type="text" id="username" name="username" value="kan" placeholder="username" size="60"/>[0m[0m
+[0m[[0minfo[0m] [0m[31m  </dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.minLength</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.maxLength</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.required</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m  </dl>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m                  [0m
+[0m[[0minfo[0m] [0m[31m  <dl class=" " id="password_field">[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m      <dt><label for="password">Password</label></dt>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m      <dd>[0m[0m
+[0m[[0minfo[0m] [0m[31m      <input type="password" id="password" name="password" placeholder="password" size="60"/>[0m[0m
+[0m[[0minfo[0m] [0m[31m  </dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.minLength</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.required</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m  </dl>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m                      [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m  <dl class=" error" id="title_field">[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m      <dt><label for="title">Title(Mr/Mrs/Ms)</label></dt>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m      <dd>[0m[0m
+[0m[[0minfo[0m] [0m[31m      <input type="text" id="title" name="title" value="" placeholder="Title" size="4"/>[0m[0m
+[0m[[0minfo[0m] [0m[31m  </dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="error">error.required</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.minLength</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.maxLength</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m          <dd class="info">constraint.required</dd>[0m[0m
+[0m[[0minfo[0m] [0m      [0m
+[0m[[0minfo[0m] [0m[31m  </dl>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m                  <button>register</button>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m                  [0m
+[0m[[0minfo[0m] [0m[31m  </form>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m              </div>[0m[0m
+[0m[[0minfo[0m] [0m[31m          </div>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m      </body>[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m      </body>[0m[0m
+[0m[[0minfo[0m] [0m[31m  </html>[0m[0m
+[0m[[0minfo[0m] [0m[31m  " did not include substring "Invalid username or password combo, kindly register if you dont have an account already." (UserControllerSpec.scala:68)[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 5 events.[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.[0m
+[0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
+[0m[[0minfo[0m] [0mScalaTest[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 5 seconds, 604 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 5[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 3, failed 2, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[31m*** 2 TESTS FAILED ***[0m[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[31merror[0m] [0mFailed: Total 5, Failed 2, Errors 0, Passed 3[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	UserControllerSpec[0m
+[0m[[31merror[0m] [0m(test:[31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m

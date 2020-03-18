@@ -1,0 +1,65 @@
+@(registerForm: Form[RegisterUser], postUrl: Call)(implicit request: MessagesRequestHeader)
+
+
+@main("MiniBot - Register a User"){
+
+
+    <head>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="register-form">
+            @request.flash.data.map{ case (name, value) =>
+            <div>@name: @value</div>
+            }
+                @* Global errors are not tied to any particular form field *@
+                @if(registerForm.hasGlobalErrors) {
+                    @registerForm.globalError.map{ error =>
+                        <div>
+                            Error: @error.key: @error.message
+                        </div>
+                    }
+                }
+
+                @helper.form(postUrl){
+                @helper.CSRF.formField
+
+                @helper.inputText(
+                    registerForm("username"),
+                    '_lable -> "Username",
+                    'placeholder -> "username",
+                    'id -> "username",
+                    'size -> 60
+                )
+
+                @helper.inputPassword(
+                    registerForm("password"),
+                    '_label -> "Password",
+                    'placeholder -> "password",
+                    'id -> "password",
+                    'size -> 60
+                )
+
+                    @helper.inputText(
+                    registerForm("title"),
+                    '_label -> "Title(Mr/Mrs/Ms)",
+                    'placeholder -> "Title",
+                    'id -> "title",
+                    'size -> 4
+                    )
+                <button>register</button>
+
+                }
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </body>
+}

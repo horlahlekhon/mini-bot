@@ -1,0 +1,49 @@
+compile
+test
+testOnly AppLicationIntegrationSpec
+UPDATE
+update
+compile
+testOnly AppLicationIntegrationSpec
+test
+run
+test
+run
+test
+test\
+test
+run
+test
+run
+test
+run
+test
+run
+test
+console
+test
+run
+test
+testOnly RepositorySpec
+test
+run
+test
+tets
+test
+testOnly RepositorySpec
+test
+testOnly RepositorySpec
+run
+update
+run
+clean
+compile
+run
+test
+testOnly RepositorySpec
+test
+testOnly UserControllerSpec'
+testOnly UserControllerSpec
+test
+testOnly UserControllerSpec
+run

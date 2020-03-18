@@ -1,0 +1,5 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/lekan/Documents/workspace/personal_projects/MiniBot/conf/logback.xml,/home/lekan/Documents/workspace/personal_projects/MiniBot/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/lekan/Documents/workspace/personal_projects/MiniBot/conf/routes,/home/lekan/Documents/workspace/personal_projects/MiniBot/target/scala-2.12/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/lekan/Documents/workspace/personal_projects/MiniBot/conf/data.txt,/home/lekan/Documents/workspace/personal_projects/MiniBot/target/scala-2.12/classes/data.txt)[0m
+[0m[[0mdebug[0m] [0m	(/home/lekan/Documents/workspace/personal_projects/MiniBot/conf/application.conf,/home/lekan/Documents/workspace/personal_projects/MiniBot/target/scala-2.12/classes/application.conf)[0m

@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="lekan" name="UserControllerSpec" tests="5" errors="0" failures="2" skipped="0" time="0.892">
+                     <properties>
+      <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value=""/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://tracker.debian.org/openjdk-11"/><property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/><property name="sun.java.command" value="/usr/share/sbt/bin/sbt-launch.jar"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2020-01-14"/><property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="awt.useSystemAAFontSettings" value="on"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.6+10-post-Debian-2"/><property name="user.name" value="lekan"/><property name="file.encoding" value="UTF-8"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="11.0.6"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/><property name="java.vendor" value="Debian"/><property name="scala.ext.dirs" value="/home/lekan/.sbt/0.13/java9-rt-ext-debian_11_0_6"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="gnome"/><property name="java.class.path" value="/usr/share/sbt/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Debian"/><property name="swing.aatext" value="true"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Africa/Lagos"/><property name="os.name" value="Linux"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/lekan"/><property name="user.language" value="en"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="5.4.0-kali4-amd64"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="sun.nio.ch.bugLevel" value=""/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="java.vendor.url.bug" value="https://bugs.debian.org/openjdk-11"/><property name="user.dir" value="/home/lekan/Documents/workspace/personal_projects/MiniBot"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="11.0.6+10-post-Debian-2"/><property name="java.class.version" value="55.0"/>
+    </properties>
+                     <testcase classname="UserControllerSpec" name="HomeController Index should render the index page" time="0.181">
+                                                 
+                                               </testcase><testcase classname="UserControllerSpec" name="UserController GET /users/register should render registeration form" time="0.552">
+                                                 
+                                               </testcase><testcase classname="UserControllerSpec" name="UserController POST /users/register should accept registeration post form with valid data" time="0.121">
+                                                 
+                                               </testcase><testcase classname="UserControllerSpec" name="UserControler POST /users/login should Log a valid user in" time="0.03">
+                                                 <failure message="org.scalatest.exceptions.TestFailedException: 400 was not equal to 303" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: 400 was not equal to 303
+	at org.scalatest.MatchersHelper$.indicateFailure(MatchersHelper.scala:343)
+	at org.scalatest.MustMatchers$AnyMustWrapper.mustBe(MustMatchers.scala:6919)
+	at UserControllerSpec.$anonfun$new$8(UserControllerSpec.scala:56)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.WordSpecLike$$anon$3.apply(WordSpecLike.scala:1075)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at org.scalatest.WordSpec.withFixture(WordSpec.scala:1881)
+	at org.scalatest.WordSpecLike.invokeWithFixture$1(WordSpecLike.scala:1073)
+	at org.scalatest.WordSpecLike.$anonfun$runTest$1(WordSpecLike.scala:1085)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.WordSpecLike.runTest(WordSpecLike.scala:1085)
+	at org.scalatest.WordSpecLike.runTest$(WordSpecLike.scala:1067)
+	at org.scalatest.WordSpec.runTest(WordSpec.scala:1881)
+	at org.scalatest.WordSpecLike.$anonfun$runTests$1(WordSpecLike.scala:1144)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:370)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:407)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.WordSpecLike.runTests(WordSpecLike.scala:1144)
+	at org.scalatest.WordSpecLike.runTests$(WordSpecLike.scala:1143)
+	at org.scalatest.WordSpec.runTests(WordSpec.scala:1881)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.WordSpec.org$scalatest$WordSpecLike$$super$run(WordSpec.scala:1881)
+	at org.scalatest.WordSpecLike.$anonfun$run$1(WordSpecLike.scala:1189)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.WordSpecLike.run(WordSpecLike.scala:1189)
+	at org.scalatest.WordSpecLike.run$(WordSpecLike.scala:1187)
+	at UserControllerSpec.org$scalatestplus$play$BaseOneAppPerSuite$$super$run(UserControllerSpec.scala:13)
+	at org.scalatestplus.play.BaseOneAppPerSuite.run(BaseOneAppPerSuite.scala:50)
+	at org.scalatestplus.play.BaseOneAppPerSuite.run$(BaseOneAppPerSuite.scala:45)
+	at UserControllerSpec.run(UserControllerSpec.scala:13)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+                                               </testcase><testcase classname="UserControllerSpec" name="UserControler POST /users/login should reject an valid user in" time="0.008">
+                                                 <failure message="org.scalatest.exceptions.TestFailedException: &quot;
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        
+        &lt;title&gt;MiniBot - Register a User&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/main.css&quot;&gt;
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/assets/images/favicon.png&quot;&gt;
+        &lt;script src=&quot;/assets/javascripts/hello.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+        
+
+
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/main.css&quot;&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;register-form&quot;&gt;
+            
+                
+                
+
+                 
+&lt;form action=&quot;/users/register&quot; method=&quot;POST&quot; &gt;
+    
+                &lt;input type=&quot;hidden&quot; name=&quot;csrfToken&quot; value=&quot;8dbeff57082ff36a6eff0204e466f19f9f636d88-1584533873312-47302b74f2c1ce17db11b80f&quot;/&gt;
+
+                
+
+&lt;dl class=&quot; &quot; id=&quot;username_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; value=&quot;kan&quot; placeholder=&quot;username&quot; size=&quot;60&quot;/&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.minLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.maxLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.required&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+
+                
+&lt;dl class=&quot; &quot; id=&quot;password_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;password&quot; size=&quot;60&quot;/&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.minLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.required&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+
+                    
+
+&lt;dl class=&quot; error&quot; id=&quot;title_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;title&quot;&gt;Title(Mr/Mrs/Ms)&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;title&quot; name=&quot;title&quot; value=&quot;&quot; placeholder=&quot;Title&quot; size=&quot;4&quot;/&gt;
+&lt;/dd&gt;
+    
+        &lt;dd class=&quot;error&quot;&gt;error.required&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.minLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.maxLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.required&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+                &lt;button&gt;register&lt;/button&gt;
+
+                
+&lt;/form&gt;
+
+
+
+
+
+
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+&quot; did not include substring &quot;Invalid username or password combo, kindly register if you dont have an account already.&quot;" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: &quot;
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        
+        &lt;title&gt;MiniBot - Register a User&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/main.css&quot;&gt;
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/assets/images/favicon.png&quot;&gt;
+        &lt;script src=&quot;/assets/javascripts/hello.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+        
+
+
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/main.css&quot;&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;register-form&quot;&gt;
+            
+                
+                
+
+                 
+&lt;form action=&quot;/users/register&quot; method=&quot;POST&quot; &gt;
+    
+                &lt;input type=&quot;hidden&quot; name=&quot;csrfToken&quot; value=&quot;8dbeff57082ff36a6eff0204e466f19f9f636d88-1584533873312-47302b74f2c1ce17db11b80f&quot;/&gt;
+
+                
+
+&lt;dl class=&quot; &quot; id=&quot;username_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; value=&quot;kan&quot; placeholder=&quot;username&quot; size=&quot;60&quot;/&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.minLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.maxLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.required&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+
+                
+&lt;dl class=&quot; &quot; id=&quot;password_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;password&quot; size=&quot;60&quot;/&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.minLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.required&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+
+                    
+
+&lt;dl class=&quot; error&quot; id=&quot;title_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;title&quot;&gt;Title(Mr/Mrs/Ms)&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;title&quot; name=&quot;title&quot; value=&quot;&quot; placeholder=&quot;Title&quot; size=&quot;4&quot;/&gt;
+&lt;/dd&gt;
+    
+        &lt;dd class=&quot;error&quot;&gt;error.required&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.minLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.maxLength&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;constraint.required&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+                &lt;button&gt;register&lt;/button&gt;
+
+                
+&lt;/form&gt;
+
+
+
+
+
+
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+&quot; did not include substring &quot;Invalid username or password combo, kindly register if you dont have an account already.&quot;
+	at org.scalatest.MatchersHelper$.indicateFailure(MatchersHelper.scala:343)
+	at org.scalatest.MustMatchers$MustMethodHelper$.mustMatcher(MustMatchers.scala:6723)
+	at org.scalatest.MustMatchers$AnyMustWrapper.must(MustMatchers.scala:6759)
+	at UserControllerSpec.$anonfun$new$10(UserControllerSpec.scala:68)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.WordSpecLike$$anon$3.apply(WordSpecLike.scala:1075)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at org.scalatest.WordSpec.withFixture(WordSpec.scala:1881)
+	at org.scalatest.WordSpecLike.invokeWithFixture$1(WordSpecLike.scala:1073)
+	at org.scalatest.WordSpecLike.$anonfun$runTest$1(WordSpecLike.scala:1085)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.WordSpecLike.runTest(WordSpecLike.scala:1085)
+	at org.scalatest.WordSpecLike.runTest$(WordSpecLike.scala:1067)
+	at org.scalatest.WordSpec.runTest(WordSpec.scala:1881)
+	at org.scalatest.WordSpecLike.$anonfun$runTests$1(WordSpecLike.scala:1144)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:370)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:407)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.WordSpecLike.runTests(WordSpecLike.scala:1144)
+	at org.scalatest.WordSpecLike.runTests$(WordSpecLike.scala:1143)
+	at org.scalatest.WordSpec.runTests(WordSpec.scala:1881)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.WordSpec.org$scalatest$WordSpecLike$$super$run(WordSpec.scala:1881)
+	at org.scalatest.WordSpecLike.$anonfun$run$1(WordSpecLike.scala:1189)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.WordSpecLike.run(WordSpecLike.scala:1189)
+	at org.scalatest.WordSpecLike.run$(WordSpecLike.scala:1187)
+	at UserControllerSpec.org$scalatestplus$play$BaseOneAppPerSuite$$super$run(UserControllerSpec.scala:13)
+	at org.scalatestplus.play.BaseOneAppPerSuite.run(BaseOneAppPerSuite.scala:50)
+	at org.scalatestplus.play.BaseOneAppPerSuite.run$(BaseOneAppPerSuite.scala:45)
+	at UserControllerSpec.run(UserControllerSpec.scala:13)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+                                               </testcase>
+                     <system-out></system-out>
+                     <system-err></system-err>
+                   </testsuite>

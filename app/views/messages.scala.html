@@ -1,0 +1,49 @@
+@(messages: Seq[Message], messageForm: Form[String], postUrl: Call)( implicit request: Request[AnyContent], messagesProvider: MessagesProvider)
+
+
+@main("MicroBot - messages"){
+
+    <body>
+
+        <h4>Welcome to MiniMicroBot @request.session.data.getOrElse("username", ""), pardon the username, if you will... Enter a text and let the bot respond like a boss</h4>
+
+
+        @helper.form(postUrl, 'id -> "user-login-form") {
+            @helper.CSRF.formField
+            @helper.inputText(
+                messageForm("message"),
+                '_label -> "Message",
+                'placeholder -> "message",
+                'id -> "message",
+            )
+
+            <button>Send</button>
+        }
+
+
+
+        <div class="chat ">
+            <h6>Chat History: </h6>
+            <div id="message-group">
+                @for(msg <- messages){
+                    <div class="message">
+                        <div class="card" style="width: 300px; height: 50px; margin-bottom: 20px;">
+                            <span class="card-header">User</span>
+                            <div class=" card-body">
+                                @msg.message
+@*                                <span class="card-text"></span>*@
+                            </div>
+                        </div>
+                        <div class="bot-msg card" style="margin-bottom: 20px; width: 300px; height: 50px;">
+                            <span class=" badge badge-dark">@msg.reply</span>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+
+
+        </body>
+}

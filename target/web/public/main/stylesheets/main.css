@@ -1,0 +1,29 @@
+#message-group {
+
+    min-height: 300px;
+
+}
+
+#message-group .message{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.user-msg {
+    /*margin: 20px;*/
+    width: 500px;
+    height: 20px;
+}
+
+.bot-msg {
+    margin: 20px;
+    width: 500px;
+    height: 20px;
+}
+
+#chat{
+    width: 500px;
+    justify-self: center;
+    margin: 50px;
+}
