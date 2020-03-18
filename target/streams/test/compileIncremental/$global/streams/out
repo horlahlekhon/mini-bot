@@ -18,7 +18,7 @@
 [0m[[0minfo[0m] [0mCompiling 5 Scala sources to /home/lekan/Documents/workspace/personal_projects/MiniBot/target/scala-2.12/test-classes...[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.17:component from component compiler for Scala 2.12.2[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.17:component from component compiler for Scala 2.12.2[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 463f3b0d, interfacing (CompilerInterface) with Scala compiler version 2.12.2[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 6284f211, interfacing (CompilerInterface) with Scala compiler version 2.12.2[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
 [0m[[0mdebug[0m] [0m	-unchecked[0m
@@ -38,7 +38,7 @@
 [0m[[33mwarn[0m] [0mclass UserControllerSpec extends TestSpec with MockitoSugar  {[0m
 [0m[[33mwarn[0m] [0m                                               ^[0m
 [0m[[33mwarn[0m] [0mthree warnings found[0m
-[0m[[0mdebug[0m] [0mScala compilation took 5.830257466 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 2.477673398 s[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidating /home/lekan/Documents/workspace/personal_projects/MiniBot/test/MessageActorSpec.scala...[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /home/lekan/Documents/workspace/personal_projects/MiniBot/test/MessageActorSpec.scala...[0m
 [0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/lekan/Documents/workspace/personal_projects/MiniBot/test/MessageActorSpec.scala)[0m
