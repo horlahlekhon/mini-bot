@@ -1,12 +1,10 @@
 package services
 
 import akka.actor.{Actor, Props}
-import akka.stream.Materializer
-import models.{Message, MessageRepository, Response, ResponseRepo}
+import models.{MessageRepository, Response, ResponseRepo}
 import services.MessageActor.{GetMessage, LoadResponse}
 
 import scala.io.Source
-import scala.reflect.io.File
 
 
 object MessageActor {
@@ -21,8 +19,6 @@ class MessageActor(messagesFile: Option[String], messageRepo: MessageRepository,
 
   override def preStart(): Unit = {
     super.preStart()
-
-    println(s" Messages Actor Starting -> Loading response data to database from file $messagesFile")
     messagesFile match {
       case Some(value) =>
         val source = Source.fromFile(value)

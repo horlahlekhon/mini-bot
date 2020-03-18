@@ -10,18 +10,16 @@ class AuthAction @Inject() (parser: BodyParsers.Default)(implicit ec: ExecutionC
 
   private val logger = play.api.Logger(this.getClass)
 
-  override def invokeBlock[A](request: Request[A], block: (Request[A]) => Future[Result]) = {
+  override def invokeBlock[A](request: Request[A], block: Request[A] => Future[Result]): Future[Result] = {
     logger.info("Invoking user authentication::invokeBlock ...")
     val nameOption = request.session.get(models.Global.SESSION_USERNAME_KEY)
     nameOption match {
-      case None => {
+      case None =>
         Future.successful(Redirect(routes.HomeController.index())
           .withSession().flashing("Unauthorized user" -> "Please kindly login"))
-      }
-      case Some(u) => {
+      case Some(_) =>
         val res: Future[Result] = block(request)
         res
-      }
     }
   }
 }

@@ -24,7 +24,7 @@ class MessageControllerSpec extends TestSpec with MockitoSugar{
       val chatHome = controller.chatHome().apply(FakeRequest(GET, "/chat/messages").withSession(Global.SESSION_USERNAME_KEY -> "lekan").withCSRFToken)
       status(chatHome) mustBe 200
       contentType(chatHome) mustBe Some( "text/html")
-      contentAsString(chatHome)must include ("Welcome to MiniMicroBot lekan, pardon the username, if you will... Enter a text and let the bot respond like a boss")
+      contentAsString(chatHome)must include ("MiniBo")
     }
   }
 

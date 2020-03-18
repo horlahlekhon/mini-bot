@@ -1,28 +1,14 @@
 package models
 
 import javax.inject.Inject
-import play.api.libs.json._
+import play.api.libs.json.{JsObject, Json, OFormat}
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.bson.Macros.Annotations.Key
-import reactivemongo.bson.{BSONDocument, BSONObjectID, document}
-import reactivemongo.play.json.collection.JSONCollection
+import reactivemongo.api.commands.UpdateWriteResult
 import reactivemongo.api.{Cursor, ReadPreference}
+import reactivemongo.bson.{BSONObjectID, document}
 import reactivemongo.play.json._
-import reactivemongo.api.commands.WriteResult
-import play.api.libs.json.{JsObject, Json}
-import javax.inject.Inject
-import play.api.data.Form
-import play.api.data.Forms.mapping
-import play.modules.reactivemongo.ReactiveMongoApi
-import reactivemongo.bson.{BSONDocument, BSONObjectID}
-import play.api.libs.json.{JsObject, Json}
-import reactivemongo.api.bson.Macros.Annotations.Key
 import reactivemongo.play.json.collection.JSONCollection
-
-import scala.concurrent.{ExecutionContext, Future}
-import reactivemongo.api.{Cursor, ReadPreference}
-import reactivemongo.api.commands.WriteResult
-import reactivemongo.play.json._
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Random
@@ -30,7 +16,7 @@ import scala.util.Random
 case class Response(@Key("_id") id: BSONObjectID = BSONObjectID.generate(), msg: String)
 
 object ResponseFormat {
-  implicit val responseFormat = Json.format[Response]
+  implicit val responseFormat: OFormat[Response] = Json.format[Response]
 }
 
 class ResponseRepo @Inject()(implicit ec: ExecutionContext, reactiveMongoApi: ReactiveMongoApi){
@@ -38,11 +24,11 @@ class ResponseRepo @Inject()(implicit ec: ExecutionContext, reactiveMongoApi: Re
   import ResponseFormat._
   val responseCollection:  Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("responses"))
 
-  def create(resp: Response) = {
+  def create(resp: Response): Future[UpdateWriteResult] = {
     responseCollection.flatMap(_.update(document("msg" -> resp.msg), resp, upsert = true))
   }
 
-  def getAll() =  {
+  def getAll: Future[Seq[Response]] =  {
     responseCollection.flatMap {
       _.find(
         selector = Json.obj(),
@@ -51,7 +37,7 @@ class ResponseRepo @Inject()(implicit ec: ExecutionContext, reactiveMongoApi: Re
         .collect[Seq](maxDocs = 100, err = Cursor.FailOnError[Seq[Response]]())
     }
   }
-  def getResponse = {
+  def getResponse: Future[Response] = {
     for {
       data <- getAll
       randomInt = Random.nextInt(data.length)

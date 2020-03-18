@@ -3,21 +3,20 @@ import javax.inject.Inject
 import play.api.libs.json._
 import reactivemongo.api.ReadPreference
 import reactivemongo.api.bson.Macros.Annotations.Key
-//import play.modules.reactivemongo.ReactiveMongoApi
-import reactivemongo.api.commands.WriteResult
-import reactivemongo.bson.{BSONDocument, BSONObjectID}
-import reactivemongo.play.json.collection.JSONCollection
-import reactivemongo.play.json._
-import scala.concurrent.{ExecutionContext, Future}
-import reactivemongo.api.Cursor
 import play.modules.reactivemongo.ReactiveMongoApi
+import reactivemongo.api.Cursor
+import reactivemongo.api.commands.WriteResult
 import reactivemongo.bson.{BSONDocument, BSONObjectID, document}
+import reactivemongo.play.json._
+import reactivemongo.play.json.collection.JSONCollection
+
+import scala.concurrent.{ExecutionContext, Future}
 
 case class Message(message: String, @Key("_id") id: BSONObjectID = BSONObjectID.generate(), username: String, reply: String)
 
 object MessageFormat {
 
-  implicit val messageFormat = Json.format[Message]
+  implicit val messageFormat: OFormat[Message] = Json.format[Message]
 }
 
 class MessageRepository @Inject()(implicit ec: ExecutionContext, reactiveMongoApi: ReactiveMongoApi){
@@ -35,7 +34,7 @@ class MessageRepository @Inject()(implicit ec: ExecutionContext, reactiveMongoAp
     projection = Option.empty[BSONDocument])
     .one[Message])
 
-  def getAllMessages = {
+  def getAllMessages: Future[Seq[Message]] = {
     messageCollection.flatMap {
       _.find(
         selector = Json.obj(),
@@ -45,7 +44,7 @@ class MessageRepository @Inject()(implicit ec: ExecutionContext, reactiveMongoAp
     }
   }
 
-  def getForUser(username: String) = {
+  def getForUser(username: String): Future[List[Message]] = {
     messageCollection.flatMap(_.find(
       document("username" -> username))
         .cursor[Message]()

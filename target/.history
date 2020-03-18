@@ -47,3 +47,10 @@ testOnly UserControllerSpec
 test
 testOnly UserControllerSpec
 run
+test
+run
+test
+run
+test
+run
+test

@@ -1,49 +1,64 @@
-@(messages: Seq[Message], messageForm: Form[String], postUrl: Call)( implicit request: Request[AnyContent], messagesProvider: MessagesProvider)
+@(messages: Seq[Message], messageForm: Form[String], postUrl: Call)(implicit request: Request[AnyContent], messagesProvider: MessagesProvider)
 
 
-@main("MicroBot - messages"){
+@main("MicroBot - messages") {
 
-    <body>
-
-        <h4>Welcome to MiniMicroBot @request.session.data.getOrElse("username", ""), pardon the username, if you will... Enter a text and let the bot respond like a boss</h4>
+    <section>
 
 
-        @helper.form(postUrl, 'id -> "user-login-form") {
-            @helper.CSRF.formField
-            @helper.inputText(
-                messageForm("message"),
-                '_label -> "Message",
-                'placeholder -> "message",
-                'id -> "message",
-            )
+        <section class="msger">
 
-            <button>Send</button>
-        }
+            @for(msg <- messages) {
+                <div class="msg right-msg">
+                    <div
+                    class="msg-img"
+                    style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
+                    ></div>
 
-
-
-        <div class="chat ">
-            <h6>Chat History: </h6>
-            <div id="message-group">
-                @for(msg <- messages){
-                    <div class="message">
-                        <div class="card" style="width: 300px; height: 50px; margin-bottom: 20px;">
-                            <span class="card-header">User</span>
-                            <div class=" card-body">
-                                @msg.message
-@*                                <span class="card-text"></span>*@
-                            </div>
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">@request.session.data.getOrElse("username", "User")</div>
                         </div>
-                        <div class="bot-msg card" style="margin-bottom: 20px; width: 300px; height: 50px;">
-                            <span class=" badge badge-dark">@msg.reply</span>
+
+                        <div class="msg-text">
+                        @msg.message
                         </div>
                     </div>
-                }
-            </div>
+                </div>
+                <div class="msg left-msg">
+                    <div
+                    class="msg-img"
+                    style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+                    ></div>
 
-        </div>
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">MiniBot</div>
+                        </div>
+
+                        <div class="msg-text">
+                        @msg.reply
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </section>
+    </section>
+    <main  >
+    @helper.form(postUrl, 'id -> "user-login-form", 'class -> "form-group") {
+        @helper.CSRF.formField
+        @helper.inputText(
+            messageForm("message"),
+            'placeholder -> "message",
+            'id -> "message",
+            'class -> "form-control "
+        )
+        <button class="btn btn-primary" style="width: 100vw">Send</button>
+    }
+    </main>
 
 
+    </main>
 
-        </body>
 }

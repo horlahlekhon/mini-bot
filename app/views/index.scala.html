@@ -2,38 +2,17 @@
  * This template takes a single argument, a String containing a
  * message to display.
  *@
-@import views.html.helper.form
+@import views.html.helper.FieldConstructor
 @( postUrl: Call, form: Form[models.Login])(implicit request: MessagesRequestHeader)
 
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
 @main("Welcome to MicroBot") {
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @*
-    * welcome(message, style = "scala")
-    *@
+    <h5> Welcome to Minibot Kindly log in to chat with the bot </h5>
 
-    <h1> Welcome to Minibot Kindly log in to chat with the bot </h1>
-
-        <head>
-            <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
-        </head>
-
-        <body id="user-login">
             <div id="content">
 
                 <div id="user-login-form">
-
-                    <h1>User Login</h1>
-
                     @request.flash.data.map{ case (name, value) =>
                     <div>@name: @value</div>
                     }
@@ -47,27 +26,27 @@
                         }
                     }
 
-                    @helper.form(postUrl, 'id -> "user-login-form") {
+                    @helper.form(postUrl, 'id -> "user-login-form", 'class -> "form-group") {
 
                         @helper.CSRF.formField
                         @helper.inputText(
                             form("username"),
-                            '_label -> "Username",
                             'placeholder -> "username",
                             'id -> "username",
-                            'size -> 60
+                            'size -> 60,
+                            'class -> "form-control"
                         )
 
                         @helper.inputPassword(
                             form("password"),
-                            '_label -> "Password",
                             'placeholder -> "password",
                             'id -> "password",
-                            'size -> 60
+                            'size -> 60,
+                        'class -> "form-control"
                         )
 
-                        <button>Login</button>
-                        <a href="/users/register">register</a>
+                        <button class="btn btn-primary">Login</button>
+                        <a class="btn btn-success" href="/users/register">register</a>
                     }
 
                 </div>

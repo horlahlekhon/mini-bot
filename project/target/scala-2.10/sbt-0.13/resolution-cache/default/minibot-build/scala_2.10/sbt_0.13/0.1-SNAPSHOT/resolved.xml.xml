@@ -4,7 +4,7 @@
 		module="minibot-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20200318115618"
+		publication="20200318192824"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

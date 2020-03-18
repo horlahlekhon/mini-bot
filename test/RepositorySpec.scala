@@ -21,7 +21,7 @@ class RepositorySpec extends TestSpec {
 
   "UserRepository.getAllUser" should {
     "returns all users in the system" in {
-      userRepository.getAllUsers().onComplete {
+      userRepository.getAllUsers.onComplete {
         case Success(value) =>
           value mustBe asInstanceOf[Seq[User]]
         case _ => ()

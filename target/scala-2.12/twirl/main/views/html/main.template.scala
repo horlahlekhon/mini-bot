@@ -37,8 +37,8 @@ Seq[Any](format.raw/*8.1*/("""
        <link rel="stylesheet" media="screen" href=""""),_display_(/*14.53*/routes/*14.59*/.Assets.versioned("stylesheets/main.css")),format.raw/*14.100*/("""">
         <link rel="shortcut icon" type="image/png" href=""""),_display_(/*15.59*/routes/*15.65*/.Assets.versioned("images/favicon.png")),format.raw/*15.104*/("""">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-"""),format.raw/*17.108*/("""
-    """),format.raw/*18.5*/("""</head>
+      <script src=""""),_display_(/*17.21*/routes/*17.27*/.Assets.versioned("javascripts/hello.js")),format.raw/*17.68*/("""" type="text/javascript"></script>
+    </head>
     <body class="container-fluid">
         """),format.raw/*21.32*/("""
         """),_display_(/*22.10*/content),format.raw/*22.17*/("""
@@ -60,11 +60,11 @@ Seq[Any](format.raw/*8.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-03-18T13:51:08.409734
+                  DATE: 2020-03-18T20:18:56.738120
                   SOURCE: /home/lekan/Documents/workspace/personal_projects/MiniBot/app/views/main.scala.html
-                  HASH: 9c55a46a91e6575f98532518cdb22d4ec488b875
-                  MATRIX: 987->260|1111->291|1138->292|1218->397|1254->406|1289->414|1315->419|1403->480|1418->486|1481->527|1569->588|1584->594|1645->633|1789->855|1821->860|1900->1001|1937->1011|1965->1018|1997->1023
-                  LINES: 26->7|31->8|32->9|35->12|36->13|36->13|36->13|37->14|37->14|37->14|38->15|38->15|38->15|40->17|41->18|43->21|44->22|44->22|45->23
+                  HASH: 3a98c4d1c4a1fd1a3ee3d59950d2ccabbfac218e
+                  MATRIX: 987->260|1111->291|1138->292|1218->397|1254->406|1289->414|1315->419|1403->480|1418->486|1481->527|1569->588|1584->594|1645->633|1807->768|1822->774|1884->815|2002->995|2039->1005|2067->1012|2099->1017
+                  LINES: 26->7|31->8|32->9|35->12|36->13|36->13|36->13|37->14|37->14|37->14|38->15|38->15|38->15|40->17|40->17|40->17|43->21|44->22|44->22|45->23
                   -- GENERATED --
               */
           

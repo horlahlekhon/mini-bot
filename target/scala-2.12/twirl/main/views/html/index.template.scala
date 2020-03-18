@@ -14,7 +14,7 @@ import views.html._
 import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
-/*5.2*/import views.html.helper.form
+/*5.2*/import views.html.helper.FieldConstructor
 
 object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[Call,Form[models.Login],MessagesRequestHeader,play.twirl.api.HtmlFormat.Appendable] {
 
@@ -26,62 +26,50 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 Seq[Any](format.raw/*7.1*/("""
 
-"""),format.raw/*13.4*/("""
-"""),_display_(/*14.2*/main("Welcome to MicroBot")/*14.29*/ {_display_(Seq[Any](format.raw/*14.31*/("""
+"""),_display_(/*9.2*/main("Welcome to MicroBot")/*9.29*/ {_display_(Seq[Any](format.raw/*9.31*/("""
 
-    """),format.raw/*19.8*/("""
-    """),format.raw/*22.7*/("""
+    """),format.raw/*11.5*/("""<h5> Welcome to Minibot Kindly log in to chat with the bot </h5>
 
-    """),format.raw/*24.5*/("""<h1> Welcome to Minibot Kindly log in to chat with the bot </h1>
-
-        <head>
-            <link rel="stylesheet" media="screen" href=""""),_display_(/*27.58*/routes/*27.64*/.Assets.versioned("stylesheets/main.css")),format.raw/*27.105*/("""">
-        </head>
-
-        <body id="user-login">
             <div id="content">
 
                 <div id="user-login-form">
+                    """),_display_(/*16.22*/request/*16.29*/.flash.data.map/*16.44*/{ case (name, value) =>_display_(Seq[Any](format.raw/*16.67*/("""
+                    """),format.raw/*17.21*/("""<div>"""),_display_(/*17.27*/name),format.raw/*17.31*/(""": """),_display_(/*17.34*/value),format.raw/*17.39*/("""</div>
+                    """)))}),format.raw/*18.22*/("""
 
-                    <h1>User Login</h1>
+                    """),format.raw/*20.82*/("""
+                    """),_display_(/*21.22*/if(form.hasGlobalErrors)/*21.46*/ {_display_(Seq[Any](format.raw/*21.48*/("""
+                        """),_display_(/*22.26*/form/*22.30*/.globalErrors.map/*22.47*/ { error: FormError =>_display_(Seq[Any](format.raw/*22.69*/("""
+                            """),format.raw/*23.29*/("""<div>
+                                Error: """),_display_(/*24.41*/error/*24.46*/.key),format.raw/*24.50*/(""": """),_display_(/*24.53*/error/*24.58*/.message),format.raw/*24.66*/("""
+                            """),format.raw/*25.29*/("""</div>
+                        """)))}),format.raw/*26.26*/("""
+                    """)))}),format.raw/*27.22*/("""
 
-                    """),_display_(/*37.22*/request/*37.29*/.flash.data.map/*37.44*/{ case (name, value) =>_display_(Seq[Any](format.raw/*37.67*/("""
-                    """),format.raw/*38.21*/("""<div>"""),_display_(/*38.27*/name),format.raw/*38.31*/(""": """),_display_(/*38.34*/value),format.raw/*38.39*/("""</div>
-                    """)))}),format.raw/*39.22*/("""
+                    """),_display_(/*29.22*/helper/*29.28*/.form(postUrl, 'id -> "user-login-form", 'class -> "form-group")/*29.92*/ {_display_(Seq[Any](format.raw/*29.94*/("""
 
-                    """),format.raw/*41.82*/("""
-                    """),_display_(/*42.22*/if(form.hasGlobalErrors)/*42.46*/ {_display_(Seq[Any](format.raw/*42.48*/("""
-                        """),_display_(/*43.26*/form/*43.30*/.globalErrors.map/*43.47*/ { error: FormError =>_display_(Seq[Any](format.raw/*43.69*/("""
-                            """),format.raw/*44.29*/("""<div>
-                                Error: """),_display_(/*45.41*/error/*45.46*/.key),format.raw/*45.50*/(""": """),_display_(/*45.53*/error/*45.58*/.message),format.raw/*45.66*/("""
-                            """),format.raw/*46.29*/("""</div>
-                        """)))}),format.raw/*47.26*/("""
-                    """)))}),format.raw/*48.22*/("""
-
-                    """),_display_(/*50.22*/helper/*50.28*/.form(postUrl, 'id -> "user-login-form")/*50.68*/ {_display_(Seq[Any](format.raw/*50.70*/("""
-
-                        """),_display_(/*52.26*/helper/*52.32*/.CSRF.formField),format.raw/*52.47*/("""
-                        """),_display_(/*53.26*/helper/*53.32*/.inputText(
+                        """),_display_(/*31.26*/helper/*31.32*/.CSRF.formField),format.raw/*31.47*/("""
+                        """),_display_(/*32.26*/helper/*32.32*/.inputText(
                             form("username"),
-                            '_label -> "Username",
                             'placeholder -> "username",
                             'id -> "username",
-                            'size -> 60
-                        )),format.raw/*59.26*/("""
+                            'size -> 60,
+                            'class -> "form-control"
+                        )),format.raw/*38.26*/("""
 
-                        """),_display_(/*61.26*/helper/*61.32*/.inputPassword(
+                        """),_display_(/*40.26*/helper/*40.32*/.inputPassword(
                             form("password"),
-                            '_label -> "Password",
                             'placeholder -> "password",
                             'id -> "password",
-                            'size -> 60
-                        )),format.raw/*67.26*/("""
+                            'size -> 60,
+                        'class -> "form-control"
+                        )),format.raw/*46.26*/("""
 
-                        """),format.raw/*69.25*/("""<button>Login</button>
-                        <a href="/users/register">register</a>
-                    """)))}),format.raw/*71.22*/("""
+                        """),format.raw/*48.25*/("""<button class="btn btn-primary">Login</button>
+                        <a class="btn btn-success" href="/users/register">register</a>
+                    """)))}),format.raw/*50.22*/("""
 
-                """),format.raw/*73.17*/("""</div>
+                """),format.raw/*52.17*/("""</div>
 
             </div>
 
@@ -90,7 +78,7 @@ Seq[Any](format.raw/*7.1*/("""
 
 
 
-""")))}),format.raw/*82.2*/("""
+""")))}),format.raw/*61.2*/("""
 """))
       }
     }
@@ -107,11 +95,11 @@ Seq[Any](format.raw/*7.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-03-18T11:55:41.980107
+                  DATE: 2020-03-18T21:29:48.825043
                   SOURCE: /home/lekan/Documents/workspace/personal_projects/MiniBot/app/views/index.scala.html
-                  HASH: a38075cc6dc02253f5f73fdf5df3210811b57377
-                  MATRIX: 432->95|805->126|982->210|1011->406|1039->408|1075->435|1115->437|1148->566|1180->620|1213->626|1378->764|1393->770|1456->811|1672->1000|1688->1007|1712->1022|1773->1045|1822->1066|1855->1072|1880->1076|1910->1079|1936->1084|1995->1112|2045->1195|2094->1217|2127->1241|2167->1243|2220->1269|2233->1273|2259->1290|2319->1312|2376->1341|2449->1387|2463->1392|2488->1396|2518->1399|2532->1404|2561->1412|2618->1441|2681->1473|2734->1495|2784->1518|2799->1524|2848->1564|2888->1566|2942->1593|2957->1599|2993->1614|3046->1640|3061->1646|3359->1923|3413->1950|3428->1956|3730->2237|3784->2263|3922->2370|3968->2388|4047->2437
-                  LINES: 17->5|22->6|27->7|29->13|30->14|30->14|30->14|32->19|33->22|35->24|38->27|38->27|38->27|48->37|48->37|48->37|48->37|49->38|49->38|49->38|49->38|49->38|50->39|52->41|53->42|53->42|53->42|54->43|54->43|54->43|54->43|55->44|56->45|56->45|56->45|56->45|56->45|56->45|57->46|58->47|59->48|61->50|61->50|61->50|61->50|63->52|63->52|63->52|64->53|64->53|70->59|72->61|72->61|78->67|80->69|82->71|84->73|93->82
+                  HASH: 65ae51b7033d231850dd0e6fd30c3236c62ab36d
+                  MATRIX: 432->95|817->138|994->222|1022->225|1057->252|1096->254|1129->260|1318->422|1334->429|1358->444|1419->467|1468->488|1501->494|1526->498|1556->501|1582->506|1641->534|1691->617|1740->639|1773->663|1813->665|1866->691|1879->695|1905->712|1965->734|2022->763|2095->809|2109->814|2134->818|2164->821|2178->826|2207->834|2264->863|2327->895|2380->917|2430->940|2445->946|2518->1010|2558->1012|2612->1039|2627->1045|2663->1060|2716->1086|2731->1092|3032->1372|3086->1399|3101->1405|3402->1685|3456->1711|3642->1866|3688->1884|3767->1933
+                  LINES: 17->5|22->6|27->7|29->9|29->9|29->9|31->11|36->16|36->16|36->16|36->16|37->17|37->17|37->17|37->17|37->17|38->18|40->20|41->21|41->21|41->21|42->22|42->22|42->22|42->22|43->23|44->24|44->24|44->24|44->24|44->24|44->24|45->25|46->26|47->27|49->29|49->29|49->29|49->29|51->31|51->31|51->31|52->32|52->32|58->38|60->40|60->40|66->46|68->48|70->50|72->52|81->61
                   -- GENERATED --
               */
           

@@ -3,7 +3,7 @@
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for org.specs2.runner.Specs2Framework produced 0 initial tasks for 0 tests.[0m
 [0m[[0mdebug[0m] [0mRunner for org.scalatest.tools.Framework produced 4 initial tasks for 4 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(UserControllerSpec, sbt.ForkMain$SubclassFingerscan@353ebb9c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(UserControllerSpec, sbt.ForkMain$SubclassFingerscan@3f7f0d8, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mUserControllerSpec:[0m[0m
 [0m[[0minfo[0m] [0m[32mHomeController Index[0m[0m
 [0m[[0minfo[0m] [0m[32m- should render the index page[0m[0m
@@ -12,17 +12,14 @@
 [0m[[0minfo[0m] [0m[32mUserController POST /users/register[0m[0m
 [0m[[0minfo[0m] [0m[32m- should accept registeration post form with valid data[0m[0m
 [0m[[0minfo[0m] [0m[32mUserControler POST /users/login[0m[0m
-[0m[[0minfo[0m] [0m[31m- should Log a valid user in *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  400 was not equal to 303 (UserControllerSpec.scala:56)[0m[0m
-[0m[[0minfo[0m] [0m[32mUserControler POST /users/login[0m[0m
 [0m[[0minfo[0m] [0m[32m- should reject an valid user in[0m[0m
-[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 5 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(MessageActorSpec, sbt.ForkMain$SubclassFingerscan@5a03fc98, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(MessageActorSpec, sbt.ForkMain$SubclassFingerscan@5daf9fc7, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mMessageActorSpec:[0m[0m
 [0m[[0minfo[0m] [0m[32mMessageResponseActor[0m[0m
 [0m[[0minfo[0m] [0m[32m- must return a messagresponse when a GetMessage is asked[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(MessageControllerSpec, sbt.ForkMain$SubclassFingerscan@45a6f546, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(MessageControllerSpec, sbt.ForkMain$SubclassFingerscan@7d9ba8eb, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mMessageControllerSpec:[0m[0m
 [0m[[0minfo[0m] [0m[32mMessageController GET /chat/messages[0m[0m
 [0m[[0minfo[0m] [0m[32m- should serve chat homepage with existing messages[0m[0m
@@ -33,7 +30,7 @@
 [0m[[0minfo[0m] [0m[32mMessageController POST /chat/messages[0m[0m
 [0m[[0minfo[0m] [0m[32m- should redirect back to home if user is not authenticated[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(RepositorySpec, sbt.ForkMain$SubclassFingerscan@9943d3a, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(RepositorySpec, sbt.ForkMain$SubclassFingerscan@637a5bc8, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mRepositorySpec:[0m[0m
 [0m[[0minfo[0m] [0m[32mUserRepository.getAllUser[0m[0m
 [0m[[0minfo[0m] [0m[32m- should returns all users in the system[0m[0m
@@ -49,17 +46,15 @@
 [0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
 [0m[[0minfo[0m] [0mScalaTest[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 6 seconds, 179 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 17[0m[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 6 seconds, 421 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 16[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 4, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 16, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
-[0m[[31merror[0m] [0mFailed: Total 17, Failed 1, Errors 0, Passed 16[0m
+[0m[[0minfo[0m] [0mPassed: Total 16, Failed 0, Errors 0, Passed 16[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	RepositorySpec[0m
+[0m[[0mdebug[0m] [0m	UserControllerSpec[0m
 [0m[[0mdebug[0m] [0m	MessageControllerSpec[0m
 [0m[[0mdebug[0m] [0m	MessageActorSpec[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	UserControllerSpec[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

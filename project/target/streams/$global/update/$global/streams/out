@@ -13401,7 +13401,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.7!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1097ms :: artifacts dl 37ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1330ms :: artifacts dl 34ms[0m
 [0m[[0mdebug[0m] [0m	report for default#minibot-build;0.1-SNAPSHOT compile produced in /home/lekan/Documents/workspace/personal_projects/MiniBot/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minibot-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#minibot-build;0.1-SNAPSHOT runtime produced in /home/lekan/Documents/workspace/personal_projects/MiniBot/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minibot-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#minibot-build;0.1-SNAPSHOT test produced in /home/lekan/Documents/workspace/personal_projects/MiniBot/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minibot-build-test.xml[0m
@@ -13415,7 +13415,7 @@
 [0m[[0mdebug[0m] [0m	report for default#minibot-build;0.1-SNAPSHOT docs produced in /home/lekan/Documents/workspace/personal_projects/MiniBot/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minibot-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#minibot-build;0.1-SNAPSHOT pom produced in /home/lekan/Documents/workspace/personal_projects/MiniBot/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minibot-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#minibot-build;0.1-SNAPSHOT scala-tool produced in /home/lekan/Documents/workspace/personal_projects/MiniBot/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minibot-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1097ms resolve - 37ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1330ms resolve - 34ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mFound version conflict(s) in library dependencies; some are suspected to be binary incompatible:[0m
 [0m[[33mwarn[0m] [0m[0m
